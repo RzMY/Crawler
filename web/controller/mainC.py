@@ -14,5 +14,4 @@ class MainHandler(BaseHandler):
     def get(self):
         self.cursor.execute("SELECT * FROM EntertainmentNews")
         EntertainmentNews = self.cursor.fetchall()
-        print(EntertainmentNews)
         self.render("index.html", EntertainmentNews=EntertainmentNews)
