@@ -1,5 +1,4 @@
-import tornado.web
-from conf.base import BaseHandler,EnterHandler
+from conf.base import BaseHandler
 
 class MainHandler(BaseHandler):
     def initialize(self, db):
