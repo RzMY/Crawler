@@ -308,10 +308,18 @@ button.btn:hover {
 .top-news .tn-img {
     position: relative;
     overflow: hidden;
+    padding-bottom: 64.44%;
 }
 
 .top-news .tn-img img {
+    /* width: 100%; */
+    /* object-fit:cover */
+    /* width: 100%; */
+    /* height: 100%; */
+    position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .top-news .tn-img:hover img {
@@ -534,6 +542,14 @@ button.btn:hover {
     font-size: 28px;
 }
 
+/* .main-news .mn-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-news .mn-img img {
+    width: 100%;
+} */
 .main-news .mn-img {
     position: relative;
     overflow: hidden;
@@ -541,6 +557,8 @@ button.btn:hover {
 
 .main-news .mn-img img {
     width: 100%;
+    height: 75px;
+    object-fit: cover;
 }
 
 .main-news .mn-content {

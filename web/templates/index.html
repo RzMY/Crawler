@@ -37,7 +37,7 @@
                     </div>
                     <div class="col-lg-6 col-md-4">
                         <div class="search">
-                            <input type="text" placeholder="Search">
+                            <input type="text" placeholder="搜索">
                             <button><i class="fa fa-search"></i></button>
                         </div>
                     </div>
@@ -67,19 +67,19 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav m-auto">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="#" class="nav-item nav-link">Sports</a>
-                            <a href="#" class="nav-item nav-link">Tech</a>
-                            <a href="#" class="nav-item nav-link">Fashion</a>
+                            <a href="index.html" class="nav-item nav-link active">首页</a>
+                            <a href="#" class="nav-item nav-link">体育</a>
+                            <a href="#" class="nav-item nav-link">科技</a>
+                            <a href="#" class="nav-item nav-link">时尚</a>
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">更多</a>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Sub Item 1</a>
-                                    <a href="#" class="dropdown-item">Sub Item 2</a>
+                                    <a href="#" class="dropdown-item">商业</a>
+                                    <a href="#" class="dropdown-item">娱乐</a>
                                 </div>
                             </div>
-                            <a href="single-page.html" class="nav-item nav-link">Single Page</a>
-                            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                            <a href="single-page.html" class="nav-item nav-link">单页</a>
+                            <a href="contact.html" class="nav-item nav-link">联系我们</a>
                         </div>
                     </div>
                 </nav>
@@ -93,11 +93,11 @@
                 <div class="row">
                     <div class="col-md-6 tn-left">
                         <div class="tn-img">
-                            <img src="/static/img/top-news-1.jpg" />
+                            <img src="{{LatestNews[0][3]}}" />
                             <div class="tn-content">
                                 <div class="tn-content-inner">
-                                    <a class="tn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                    <a class="tn-title" href="">Lorem ipsum dolor sit amet adipiscing elit</a>
+                                    <a class="tn-date" href=""><i class="far fa-clock"></i>{{LatestNews[0][0]}}</a>
+                                    <a class="tn-title" href="">{{LatestNews[0][2]}}</a>
                                 </div>
                             </div>
                         </div>
@@ -106,44 +106,44 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="tn-img">
-                                    <img src="/static/img/top-news-2.jpg" />
+                                    <img src="{{LatestNews[1][3]}}" />
                                     <div class="tn-content">
                                         <div class="tn-content-inner">
-                                            <a class="tn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="tn-title" href="">Integer faucibus pharetra odio</a>
+                                            <a class="tn-date" href=""><i class="far fa-clock"></i>{{LatestNews[1][0]}}</a>
+                                            <a class="tn-title" href="">{{LatestNews[1][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="tn-img">
-                                    <img src="/static/img/top-news-3.jpg" />
+                                    <img src="{{LatestNews[2][3]}}" />
                                     <div class="tn-content">
                                         <div class="tn-content-inner">
-                                            <a class="tn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="tn-title" href="">Nulla vitae pharetra ligula</a>
+                                            <a class="tn-date" href=""><i class="far fa-clock"></i>{{LatestNews[2][0]}}</a>
+                                            <a class="tn-title" href="">{{LatestNews[2][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="tn-img">
-                                    <img src="/static/img/top-news-4.jpg" />
+                                    <img src="{{LatestNews[3][3]}}" />
                                     <div class="tn-content">
                                         <div class="tn-content-inner">
-                                            <a class="tn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="tn-title" href="">Ut ac euismod tellus a blandit</a>
+                                            <a class="tn-date" href=""><i class="far fa-clock"></i>{{LatestNews[3][0]}}</a>
+                                            <a class="tn-title" href="">{{LatestNews[3][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="tn-img">
-                                    <img src="/static/img/top-news-5.jpg" />
+                                    <img src="{{LatestNews[4][3]}}" />
                                     <div class="tn-content">
                                         <div class="tn-content-inner">
-                                            <a class="tn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="tn-title" href="">Cras ac egestas sem nec euismod</a>
+                                            <a class="tn-date" href=""><i class="far fa-clock"></i>{{LatestNews[4][0]}}</a>
+                                            <a class="tn-title" href="">{{LatestNews[4][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -161,37 +161,37 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2><i class="fas fa-align-justify"></i>Sports</h2>
+                        <h2><i class="fas fa-align-justify"></i>体育</h2>
                         <div class="row cn-slider">
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="/static/img/cat-news-1.jpg" />
+                                    <img src="{{SportsNews[0][3]}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Cras sed semper puru vitae lobortis velit</a>
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{SportsNews[0][0]}}</a>
+                                            <a class="cn-title" href="">{{SportsNews[0][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="/static/img/cat-news-2.jpg" />
+                                    <img src="{{SportsNews[1][3]}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Vestibulum ante ipsum primis</a>
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{SportsNews[1][0]}}</a>
+                                            <a class="cn-title" href="">{{SportsNews[1][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="/static/img/cat-news-3.jpg" />
+                                    <img src="{{SportsNews[2][3]}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Sed quis convallis lacus</a>
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{SportsNews[2][0]}}</a>
+                                            <a class="cn-title" href="">{{SportsNews[2][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -199,37 +199,37 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h2><i class="fas fa-align-justify"></i>Technology</h2>
+                        <h2><i class="fas fa-align-justify"></i>科技</h2>
                         <div class="row cn-slider">
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="/static/img/cat-news-4.jpg" />
+                                    <img src="{{SportsNews[0][3]}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Vivamus vel felis nec magna</a>
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{SportsNews[0][0]}}</a>
+                                            <a class="cn-title" href="">{{SportsNews[0][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="/static/img/cat-news-5.jpg" />
+                                    <img src="{{SportsNews[1][3]}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Phasellus vitae fermentum est</a>
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{SportsNews[1][0]}}</a>
+                                            <a class="cn-title" href="">{{SportsNews[1][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="/static/img/cat-news-6.jpg" />
+                                    <img src="{{SportsNews[2][3]}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Aenean ut varius dui</a>
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{SportsNews[2][0]}}</a>
+                                            <a class="cn-title" href="">{{SportsNews[2][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -247,37 +247,37 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2><i class="fas fa-align-justify"></i>Business</h2>
+                        <h2><i class="fas fa-align-justify"></i>商业</h2>
                         <div class="row cn-slider">
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="/static/img/cat-news-7.jpg" />
+                                    <img src="{{BusinessNews[0][3]}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Interdum et malesuada fames ac ante</a>
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{BusinessNews[0][0]}}</a>
+                                            <a class="cn-title" href="">{{BusinessNews[0][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="/static/img/cat-news-8.jpg" />
+                                    <img src="{{BusinessNews[1][3]}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Mauris non ligula eget ante sagittis</a>
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{BusinessNews[1][0]}}</a>
+                                            <a class="cn-title" href="">{{BusinessNews[1][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="/static/img/cat-news-9.jpg" />
+                                    <img src="{{BusinessNews[2][3]}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Integer non nunc nec nulla aliquet</a>
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{BusinessNews[2][0]}}</a>
+                                            <a class="cn-title" href="">{{BusinessNews[2][2]}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -285,7 +285,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h2><i class="fas fa-align-justify"></i>Entertainment</h2>
+                        <h2><i class="fas fa-align-justify"></i>娱乐</h2>
                         <div class="row cn-slider">
                             <div class="col-md-6">
                                 <div class="cn-img">
@@ -335,128 +335,128 @@
                     <div class="col-md-8">
                         <div class="row">
                             <div class="col-md-12">
-                                <h2><i class="fas fa-align-justify"></i>Latest News</h2>
+                                <h2><i class="fas fa-align-justify"></i>新闻</h2>
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <div class="mn-img">
-                                            <img src="/static/img/latest-news.jpg" />
+                                        <div class="mn-img_" style="position: relative;overflow: hidden;">
+                                            <img src="{{LatestNews[0][3]}}" style="width: 100%;"/>
                                         </div>
                                         <div class="mn-content">
-                                            <a class="mn-title" href="">Cras commodo sem ut porta laoreet</a>
-                                            <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                            <a class="mn-title" href="">{{LatestNews[0][2]}}</a>
+                                            <a class="mn-date" href=""><i class="far fa-clock"></i>{{LatestNews[0][0]}}</a>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed porta dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos...
+                                                {{LatestNews[0][1]}}
                                             </p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="/static/img/latest-news.jpg" />
+                                                <img src="{{LatestNews[1][3]}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="">Pellentesque sit amet rutrum lacus</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                                <a class="mn-title" href="">{{LatestNews[1][2]}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{LatestNews[1][0]}}</a>
                                             </div>
                                         </div>
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="/static/img/latest-news.jpg" />
+                                                <img src="{{LatestNews[2][3]}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="">Proin id pretium orci, quis rhoncus eros</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                                <a class="mn-title" href="">{{LatestNews[2][2]}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{LatestNews[2][0]}}</a>
                                             </div>
                                         </div>
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="/static/img/latest-news.jpg" />
+                                                <img src="{{LatestNews[3][3]}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="">Curabitur viverra scelerisque tempor</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                                <a class="mn-title" href="">{{LatestNews[3][2]}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{LatestNews[3][0]}}</a>
                                             </div>
                                         </div>
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="/static/img/latest-news.jpg" />
+                                                <img src="{{LatestNews[4][3]}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="">Integer nec lorem facilisis interdum lorem non</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                                <a class="mn-title" href="">{{LatestNews[4][2]}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{LatestNews[4][0]}}</a>
                                             </div>
                                         </div>
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="/static/img/latest-news.jpg" />
+                                                <img src="{{LatestNews[5][3]}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="">Interdum et malesuada fames</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                                <a class="mn-title" href="">{{LatestNews[5][2]}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{LatestNews[5][0]}}</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <h2><i class="fas fa-align-justify"></i>Popular News</h2>
+                                <h2><i class="fas fa-align-justify"></i>热门</h2>
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <div class="mn-img">
-                                            <img src="/static/img/popular-news.jpg" />
+                                        <div class="mn-img_" style="position: relative;overflow: hidden;">
+                                            <img src="{{RecommendedNews[0][3]}}" style="width: 100%;" />
                                         </div>
                                         <div class="mn-content">
-                                            <a class="mn-title" href="">Phasellus gravida metus vitae laoreet aliquam</a>
-                                            <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                            <a class="mn-title" href="">{{RecommendedNews[0][2]}}</a>
+                                            <a class="mn-date" href=""><i class="far fa-clock"></i>{{RecommendedNews[0][0]}}</a>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed porta dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos...
+                                                {{RecommendedNews[0][1]}}
                                             </p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="/static/img/popular-news.jpg" />
+                                                <img src="{{RecommendedNews[1][3]}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="">Nullam risus ante sempe</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                                <a class="mn-title" href="">{{RecommendedNews[1][2]}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{RecommendedNews[1][0]}}</a>
                                             </div>
                                         </div>
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="/static/img/popular-news.jpg" />
+                                                <img src="{{RecommendedNews[2][3]}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="">Pellentesque ultrices quam id ipsum tempor</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                                <a class="mn-title" href="">{{RecommendedNews[2][2]}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{RecommendedNews[2][0]}}</a>
                                             </div>
                                         </div>
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="/static/img/popular-news.jpg" />
+                                                <img src="{{RecommendedNews[3][3]}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="">Nam ex magna, commodo sed turpis rutrum</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                                <a class="mn-title" href="">{{RecommendedNews[3][2]}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{RecommendedNews[3][0]}}</a>
                                             </div>
                                         </div>
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="/static/img/popular-news.jpg" />
+                                                <img src="{{RecommendedNews[4][3]}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="">Aliquam condimentum metus</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                                <a class="mn-title" href="">{{RecommendedNews[4][2]}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{RecommendedNews[4][0]}}</a>
                                             </div>
                                         </div>
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="/static/img/popular-news.jpg" />
+                                                <img src="{{RecommendedNews[5][3]}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="">Ut ornare rutrum ligula erat volutpat</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
+                                                <a class="mn-title" href="">{{RecommendedNews[5][2]}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{RecommendedNews[5][0]}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -468,56 +468,46 @@
                     <div class="col-md-4">
                         <div class="sidebar">
                             <div class="sidebar-widget">
-                                <h2><i class="fas fa-align-justify"></i>Category</h2>
+                                <h2><i class="fas fa-align-justify"></i>分类</h2>
                                 <div class="category">
                                     <ul class="fa-ul">
-                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">National</a></li>
-                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">International</a></li>
-                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">Economics</a></li>
-                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">Politics</a></li>
-                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">Lifestyle</a></li>
-                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">Technology</a></li>
-                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">Trades</a></li>
+                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">国内</a></li>
+                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">国际</a></li>
+                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">经济</a></li>
+                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">政治</a></li>
+                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">生活</a></li>
+                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">科技</a></li>
+                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">交易</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="sidebar-widget">
-                                <h2><i class="fas fa-align-justify"></i>Tags</h2>
+                                <h2><i class="fas fa-align-justify"></i>标签</h2>
                                 <div class="tags">
-                                    <a href="">National</a>
-                                    <a href="">International</a>
-                                    <a href="">Economics</a>
-                                    <a href="">Politics</a>
-                                    <a href="">Lifestyle</a>
-                                    <a href="">Technology</a>
-                                    <a href="">Trades</a>
-                                    <a href="">National</a>
-                                    <a href="">International</a>
-                                    <a href="">Economics</a>
-                                    <a href="">Politics</a>
-                                    <a href="">Lifestyle</a>
-                                    <a href="">Technology</a>
-                                    <a href="">Trades</a>
+                                    <a href="">国内</a>
+                                    <a href="">国际</a>
+                                    <a href="">经济</a>
+                                    <a href="">政治</a>
+                                    <a href="">生活方式</a>
+                                    <a href="">科技</a>
+                                    <a href="">行业</a>
                                 </div>
                             </div>
 
                             <div class="sidebar-widget">
-                                <h2><i class="fas fa-align-justify"></i>Ads 1 column</h2>
+                                <h2><i class="fas fa-align-justify"></i>关于我</h2>
                                 <div class="image">
-                                    <a href=""><img src="/static/img/adds-1.jpg" alt="Image"></a>
+                                    <a href="https://github.com/RzMY"><img src="/static/img/me2.gif" alt="Image"></a>
                                 </div>
                             </div>
 
                             <div class="sidebar-widget">
-                                <h2><i class="fas fa-align-justify"></i>Ads 2 column</h2>
+                                <h2><i class="fas fa-align-justify"></i>关于我</h2>
                                 <div class="image">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <a href=""><img src="/static/img/adds-2.jpg" alt="Image"></a>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <a href=""><img src="/static/img/adds-2.jpg" alt="Image"></a>
+                                            <a href="https://github.com/RzMY"><img src="/static/img/me1.jpg" alt="Image"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -536,37 +526,37 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h3 class="title">Useful Links</h3>
+                            <h3 class="title">友情链接</h3>
                             <ul>
-                                <li><a href="#">Pellentesque</a></li>
-                                <li><a href="#">Aliquam</a></li>
-                                <li><a href="#">Fusce placerat</a></li>
-                                <li><a href="#">Nulla hendrerit</a></li>
-                                <li><a href="#">Maecenas</a></li>
+                                <li><a href="#">新浪新闻</a></li>
+                                <li><a href="#">腾讯新闻</a></li>
+                                <li><a href="#">网易新闻</a></li>
+                                <li><a href="#">搜狐新闻</a></li>
+                                <li><a href="#">凤凰新闻</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h3 class="title">Quick Links</h3>
+                            <h3 class="title">快速跳转</h3>
                             <ul>
-                                <li><a href="#">Posuere egestas</a></li>
-                                <li><a href="#">Sollicitudin</a></li>
-                                <li><a href="#">Luctus non</a></li>
-                                <li><a href="#">Duis tincidunt</a></li>
-                                <li><a href="#">Elementum</a></li>
+                                <li><a href="#">新浪新闻</a></li>
+                                <li><a href="#">新浪体育</a></li>
+                                <li><a href="#">新浪娱乐</a></li>
+                                <li><a href="#">新浪科技</a></li>
+                                <li><a href="#">新浪财经</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h3 class="title">Get in Touch</h3>
+                            <h3 class="title">联系我们</h3>
                             <div class="contact-info">
-                                <p><i class="fa fa-map-marker"></i>123 Terry Lane, New York, USA</p>
-                                <p><i class="fa fa-envelope"></i>email@example.com</p>
-                                <p><i class="fa fa-phone"></i>+123-456-7890</p>
+                                <p><i class="fa fa-map-marker"></i>四川农业大学</p>
+                                <p><i class="fa fa-envelope"></i>qiu@dr.com</p>
+                                <p><i class="fa fa-phone"></i>16666666666</p>
                                 <div class="social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook"></i></a>
@@ -580,14 +570,14 @@
                     
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h3 class="title">Newsletter</h3>
+                            <h3 class="title">业务合作</h3>
                             <div class="newsletter">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed porta dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos
+                                    微博月活用户5亿+，是一个承载了明星、社会、综艺、新时代、电竞、情感、汽车等多垂类兴趣人群的社会化舆论场。
                                 </p>
                                 <form>
-                                    <input class="form-control" type="email" placeholder="Your email here">
-                                    <button class="btn">Submit</button>
+                                    <input class="form-control" type="email" placeholder="邮箱">
+                                    <button class="btn">提交</button>
                                 </form>
                             </div>
                         </div>
@@ -603,12 +593,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 copyright">
-                        <p>Copyright &copy; <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved</p>
+                        <p>Copyright &copy; <a href="https://github.com/RzMY">RzMY</a>. All Rights Reserved</p>
                     </div>
 
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     <div class="col-md-6 template-by">
-                        <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                        <p>Made By <a href="https://github.com/RzMY">RzMY</a></p>
                     </div>
                 </div>
             </div>
