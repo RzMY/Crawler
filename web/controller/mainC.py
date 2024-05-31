@@ -30,4 +30,4 @@ class MainHandler(BaseHandler):
                 item[0] = item[0].replace("T", " ").replace("+", " ")
                 news[i] = item
         
-        self.render("index.html", LatestNews = LatestNews, SportsNews = SportsNews, TechnologyNews = TechnologyNews, BusinessNews = BusinessNews, EntertainmentNews = EntertainmentNews, RecommendedNews = RecommendedNews)
+        self.render("main.html", LatestNews = LatestNews, SportsNews = SportsNews, TechnologyNews = TechnologyNews, BusinessNews = BusinessNews, EntertainmentNews = EntertainmentNews, RecommendedNews = RecommendedNews)
