@@ -106,8 +106,9 @@ class Crawler:
         self.driver.get(self.news_url)
         time.sleep(1)
         
+        blocked_domains = ["db.auto.sina.com.cn"]
         news_elements = driver.find_elements(By.XPATH, XPath)
-        news_urls = [news_element.get_attribute('href') for news_element in news_elements]
+        news_urls = [news_element.get_attribute('href') for news_element in news_elements if not any(blocked_domain in news_element.get_attribute('href') for blocked_domain in blocked_domains)]
         
         news_titles = []
         photo_urls = []
@@ -129,7 +130,9 @@ class Crawler:
             photo_urls.append(photo_url)
             news_authors.append(news_author)
             news_times.append(news_time)
-            
+        
+        print([[news_titles[i], photo_urls[i], news_authors[i], news_times[i]] for i in range(len(news_titles))])
+        
         cursor = self.db.cursor()
         add_news = ("INSERT INTO {} "
                 "(Time, Author, Title, ImageLink) "
@@ -139,6 +142,7 @@ class Crawler:
             cursor.execute(add_news, data_news)
             self.db.commit()
         cursor.close()
+        
         # for i in range(len(news_titles)):
         #     print(news_titles[i])
         #     print(photo_urls[i])
@@ -161,7 +165,6 @@ class Crawler:
         for i in range(len(news_types)):
             self.get_a_type_of_news(driver, news_types[i], XPaths[i])
         # self.get_a_type_of_news(driver, news_types[5], XPaths[5])
-        self.get_a_type_of_news(driver, news_types[1], XPaths[1])
         # self.driver.get(self.url)
         # time.sleep(1)
 
@@ -260,9 +263,9 @@ class Crawler:
         options.add_argument("--disable-blink-features=AutomationControlled")
         options.add_argument('--log-level=3')
         
-        self.driver = webdriver.Chrome(service=Service("D:\chromedriver-win64\chromedriver.exe"))
+        self.driver = webdriver.Chrome(service=Service("./crawler/webdriver/chromedriver.exe"))
         self.get_page(self.driver)
-        # self.get_data(self.driver)
+        self.get_data(self.driver)
         self.driver.quit()
         
     def run_thread(self):

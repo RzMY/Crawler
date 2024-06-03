@@ -12,8 +12,8 @@ setting = dict(
 
 # 全局的数据库操作对象
 db = pymysql.connect(
-    # host = '192.168.1.235',
-    host = 'localhost',
+    host = '192.168.1.235',
+    # host = 'localhost',
     user = 'root',
     password = 'qwertyuiop0!',
     db = 'crawler',
