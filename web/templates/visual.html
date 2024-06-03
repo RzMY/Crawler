@@ -243,10 +243,8 @@
             }]
         };
 
-        {% for type in comment_sum_type %}
+        {% for type, num in comment_sum.items() %}
             option.xAxis.data.push("{{ type }}");
-        {% end %}
-        {% for num in comment_sum_num %}
             option.series[0].data.push({{ num }});
         {% end %}
 

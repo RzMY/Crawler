@@ -3,7 +3,6 @@ from selenium import webdriver
 import threading
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
-from selenium.common.exceptions import NoSuchElementException
 import pymysql
 
 class Crawler:
@@ -143,12 +142,7 @@ class Crawler:
             self.db.commit()
         cursor.close()
         
-        # for i in range(len(news_titles)):
-        #     print(news_titles[i])
-        #     print(photo_urls[i])
-        #     print(news_authors[i])
-        #     print(news_times[i])
-        # print("Insert {} Success".format(news_type))
+        print("Insert {} Success".format(news_type))
     
     # 获取所有新闻
     def get_page(self,driver):
@@ -164,7 +158,10 @@ class Crawler:
         ]
         for i in range(len(news_types)):
             self.get_a_type_of_news(driver, news_types[i], XPaths[i])
-        # self.get_a_type_of_news(driver, news_types[5], XPaths[5])
+        # self.get_a_type_of_news(driver, news_types[1], XPaths[1])
+        
+        # 旧版爬虫代码
+        
         # self.driver.get(self.url)
         # time.sleep(1)
 
@@ -239,6 +236,7 @@ class Crawler:
         #     photo_urls.append(photo_url)
         #     news_authors.append(news_author)
         #     news_times.append(news_time)
+        
         # # 存储到数据库
         # print(news_titles)
         # print(photo_urls)
@@ -257,14 +255,16 @@ class Crawler:
 
     def browser_work(self):
         options = webdriver.ChromeOptions()
-        # 启用无头模式
+        
         options.add_argument('--headless')
         options.add_argument('--disable-javascript')
         options.add_argument("--disable-blink-features=AutomationControlled")
         options.add_argument('--log-level=3')
         
         self.driver = webdriver.Chrome(service=Service("./crawler/webdriver/chromedriver.exe"))
+        # 爬取新闻页面
         self.get_page(self.driver)
+        # 爬取新闻数据
         self.get_data(self.driver)
         self.driver.quit()
         

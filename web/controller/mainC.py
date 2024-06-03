@@ -24,6 +24,7 @@ class MainHandler(BaseHandler):
         self.cursor.execute("SELECT * FROM RecommendNews WHERE ImageLink != '' ORDER BY id DESC LIMIT 6")
         RecommendedNews = [list(item) for item in self.cursor.fetchall()]
 
+        # 格式化时间
         for news in [LatestNews, SportsNews, TechnologyNews, BusinessNews, EntertainmentNews, RecommendedNews]:
             for i in range(len(news)):
                 item = news[i]
